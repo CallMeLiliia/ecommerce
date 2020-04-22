@@ -21,7 +21,7 @@ Feature: Verify products
       | Printed Summer Dress        | 28.98 |
 
 
-@wip
+
   Scenario Outline: Verify multiple user registration
     Given I am on the homepage
     When I click on Sing

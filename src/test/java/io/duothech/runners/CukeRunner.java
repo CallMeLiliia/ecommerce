@@ -7,16 +7,17 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = {"pretty",
+		plugin = {"rerun:target/rerun.txt",
+				"pretty",
 		"html:target/built-inhtml-report",
 		"json:target/Cucumber.json"
 		},
 		
-		tags = {"@wip"},
+		tags = {"@smoke"},
 		features = "src/test/resources/io/duotech/features"
 		,glue = "io/duotech/step_definition"
 		,strict=true
-//		,dryRun = true
+	//	,dryRun = true
 		,monochrome = true
 		,stepNotifications = true
 		

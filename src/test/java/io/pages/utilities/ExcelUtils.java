@@ -23,7 +23,9 @@ public class ExcelUtils {
 	
 	private XSSFWorkbook workBook;
 	private XSSFSheet sheet;
-	private String path;
+	private String path;    //where file is located
+	
+	//we dont make it static because we have constructor
 	
 	
 	
