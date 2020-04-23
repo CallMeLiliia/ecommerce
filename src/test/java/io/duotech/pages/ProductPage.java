@@ -35,4 +35,10 @@ public class ProductPage {
 	
 	@FindBy (xpath="//tr[@class='even']//td[2]")
 	public WebElement style;
+	
+	@FindBy()
+	public WebElement addToCart;
+	
+	@FindBy()
+	public WebElement proceed;
 }

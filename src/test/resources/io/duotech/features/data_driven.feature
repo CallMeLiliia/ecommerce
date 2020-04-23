@@ -1,10 +1,6 @@
 Feature: Verify products
 
-  Scenario: Verify product name
-    Given I am on the homepage
-    When I click on "Blouse"
-    Then The product page should also display "Blouse"
-    And The product price should be 27.00
+
 
   Scenario Outline: Verify product info using Scenario Outline
     Given I am on the homepage

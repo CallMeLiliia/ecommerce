@@ -1,4 +1,4 @@
-Feature: Product description
+Feature: Product description verification
 
   Scenario: Verify product name
     Given I am on the homepage
@@ -10,6 +10,13 @@ Feature: Product description
     When I click on Blouse
     Then I land on product page
     And The default quantity for the product should be 1
+    
+    
+      Scenario: Verify product name
+    Given I am on the homepage
+    When I click on "Blouse"
+    Then The product page should also display "Blouse"
+    And The product price should be 27.00
 
   @plusminus
   Scenario: Verify the plus and minus buttons

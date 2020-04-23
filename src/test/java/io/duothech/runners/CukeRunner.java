@@ -13,11 +13,11 @@ import io.cucumber.junit.CucumberOptions;
 		"json:target/Cucumber.json"
 		},
 		
-		tags = {"@smoke"},
+		tags = {"@cart"},
 		features = "src/test/resources/io/duotech/features"
 		,glue = "io/duotech/step_definition"
 		,strict=true
-	//	,dryRun = true
+		,dryRun = true
 		,monochrome = true
 		,stepNotifications = true
 		

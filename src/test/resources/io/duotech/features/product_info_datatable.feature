@@ -1,0 +1,1 @@
+Feature: roduct info verification using datatables
