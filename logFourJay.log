@@ -1,0 +1,5 @@
+2020-04-23 21:58:38 INFO  LoginStepDefinition:43 - Navigating to Home Page
+2020-04-23 21:58:38 INFO  LoginStepDefinition:50 - Clicking on Sign in
+2020-04-23 21:58:38 INFO  LoginStepDefinition:57 - Getting Page Title
+2020-04-23 21:58:39 INFO  LoginStepDefinition:61 - Verifying the title
+2020-04-23 21:58:39 INFO  LoginStepDefinition:63 - Title has been verify

@@ -1,4 +1,4 @@
-Feature:
+Feature: Database related features
 
   Scenario: Verify the plus and minus buttons
     Given I am on the homepage

@@ -6,6 +6,8 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.junit.Assert;
 
 import com.github.javafaker.Faker;
@@ -23,26 +25,42 @@ import io.github.bonigarcia.wdm.Config;
 import io.pages.utilities.BrowserUtilities;
 import io.pages.utilities.ConfigReader;
 import io.pages.utilities.Driver;
+import io.pages.utilities.LoggerUtils;
+import net.bytebuddy.implementation.FieldAccessor.PropertyConfigurable;
 
 public class LoginStepDefinition {
+	
+
+	Logger logger = LoggerUtils.getLogger(LoginStepDefinition.class);
+	
+	
 	@Given("I am on the homepage")
 	public void i_am_on_the_homepage() {
 		Driver.getDriver().manage().timeouts()
 				.implicitlyWait(Long.parseLong(ConfigReader.getConfiguration("implicitTimeout")), TimeUnit.SECONDS);
 		Driver.getDriver().get(ConfigReader.getConfiguration("url"));
+		
+		logger.info("Navigating to Home Page");
 	}
 
 	@When("I click on Sing")
 	public void i_click_on_Sing() {
 		HomePage homePage = new HomePage();
 		homePage.signInLink.click();
+		logger.info("Clicking on Sign in");
 	}
 
 	@Then("The login page title should be Login - My Store")
 	public void the_login_page_title_should_be_Login_My_Store() {
+		
+		
+		logger.info("Getting Page Title");
+		
 		String actual = Driver.getDriver().getTitle();
 		String expected = "Login - My Store";
+		logger.info("Verifying the title");
 		Assert.assertEquals(expected, actual);
+		logger.info("Title has been verify");
 	}
 
 	@Then("I should be able to see email, password box and login button")

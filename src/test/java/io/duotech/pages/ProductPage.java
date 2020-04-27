@@ -36,9 +36,9 @@ public class ProductPage {
 	@FindBy (xpath="//tr[@class='even']//td[2]")
 	public WebElement style;
 	
-	@FindBy()
+	@FindBy(id="add_to_cart")
 	public WebElement addToCart;
 	
-	@FindBy()
+	@FindBy(className ="btn btn-default button button-medium")
 	public WebElement proceed;
 }
